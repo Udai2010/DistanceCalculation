@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1> Distance Calculation </h1>
-    <script>
+    <script style="display: flex; justify-content: center;">
         // Defining the Array
         var ele = prompt("Enter the number of points : ");
         var x=[ele];
@@ -24,14 +24,15 @@
         for(let i=0;i<ele;i++)
         {
             document.write(x[i]+" "+y[i]+"<br>");
-        }    
+        }   
+        document.write("<h1> Distance Matrix <br></h1>"); 
         // Calculating the distance
         for(let i=0;i<ele;i++)
         {
             for(let j=0;j<ele;j++)
             {
                 let cw=Math.sqrt(Math.pow((x[i]-x[j]),2)+Math.pow((y[i]-y[j]),2))
-                document.write(Math.round(cw*1000)/1000 +"     ");
+                document.write(" &emsp;"+Math.round(cw*1000)/1000 + "&emsp;");
             }
             document.write("<br>");
         }   
